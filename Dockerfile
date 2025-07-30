@@ -6,10 +6,11 @@ WORKDIR /app
 # Copy semua file project
 COPY . .
 
-# Install tools dasar
-RUN apt-get update && apt-get install -y \
+# Install tools dasar yang dibutuhkan
+RUN apt-get update && apt-get install -y git nmap dnsutils whois \
+    && rm -rf /var/lib/apt/lists/*
 
-# Clone theHarvester & install
+# Clone theHarvester & install requirements-nya
 RUN git clone https://github.com/laramies/theHarvester \
     && pip install -r /app/theHarvester/requirements.txt
 
