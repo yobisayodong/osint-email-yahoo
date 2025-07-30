@@ -7,8 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Install tools dasar
-apt-get update && apt-get install -y git
-
+RUN apt-get update && apt-get install -y git
 # Clone theHarvester & install sebagai library
 RUN git clone https://github.com/laramies/theHarvester.git /app/theHarvester \
     && pip install /app/theHarvester
