@@ -11,7 +11,7 @@ RUN apt-get update && apt-get install -y git
 
 # Clone theHarvester (karena tidak ada di PyPI)
 RUN git clone https://github.com/laramies/theHarvester.git /app/theHarvester \
-    && pip install -r /app/theHarvester/requirements.txt
+    && pip install /app/theHarvester
 
 # Install semua library di requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
