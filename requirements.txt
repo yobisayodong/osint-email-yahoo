@@ -1,1 +1,7 @@
 theHarvester
+requests
+beautifulsoup4
+lxml
+aiohttp
+dnspython
+shodan
