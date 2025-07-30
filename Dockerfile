@@ -7,8 +7,7 @@ WORKDIR /app
 COPY . .
 
 # Install tools dasar
-RUN apt-get update && apt-get install -y git nmap dnsutils whois \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y \
 
 # Clone theHarvester & install
 RUN git clone https://github.com/laramies/theHarvester \
